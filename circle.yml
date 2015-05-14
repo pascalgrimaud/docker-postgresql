@@ -7,5 +7,5 @@ dependencies:
     - docker build -t pgrimaud/postgresql:9.3 .
 test:
   override:
-    - docker run -d --name=postgresql pgrimaud/postgresql:9.3 ; sleep 10
-    - docker run -it pgrimaud/postgresql:9.3 sudo -u postgres -H psql -c "\conninfo"
+    - docker run -d --name=postgresql -p 5432:5432 -v ~/volumes/postgresql93/data:/var/lib/postgresql -v ~/volumes/postgresql93/logs:/var/log/postgresql pgrimaud/postgresql:9.3 ; sleep 10
+    - docker run -it postgresql sudo -u postgres -H psql -c "\conninfo"

@@ -1,4 +1,4 @@
-FROM pascalgrimaud/docker-ubuntu
+FROM pascalgrimaud/ubuntu
 MAINTAINER Pascal Grimaud <pascalgrimaud@gmail.com>
 
 # make sure the package repository is up to date
