@@ -1,15 +1,8 @@
-FROM ubuntu:14.04
+FROM iserko/docker-ubuntu-locale
 MAINTAINER Pascal Grimaud <pascalgrimaud@gmail.com>
 
 # make sure the package repository is up to date
 RUN apt-get -y update
-
-# Ensure UTF-8 locale
-RUN echo 'LANGUAGE="en_US.UTF-8"' > /etc/default/locale
-RUN echo 'LANG="en_US.UTF-8"' >> /etc/default/locale
-RUN echo 'LC_ALL="en_US.UTF-8"' >> /etc/default/locale
-RUN locale-gen en_US.UTF-8 &&\
-  DEBIAN_FRONTEND=noninteractive dpkg-reconfigure locales
 
 # install postgresql-9.3
 ENV PG_VERSION 9.3
