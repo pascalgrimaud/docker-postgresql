@@ -1,0 +1,11 @@
+machine:
+  services:
+    - docker
+dependencies:
+  override:
+    - docker info
+    - docker build -t pgrimaud/postgresql:9.3 .
+test:
+  override:
+    - docker run -d --name=postgresql pgrimaud/postgresql:9.3 ; sleep 10
+    - docker run -it pgrimaud/postgresql:9.3 sudo -u postgres -H psql -c "\conninfo"
