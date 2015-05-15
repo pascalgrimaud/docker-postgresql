@@ -1,5 +1,5 @@
 postgresql:
-  image: pgrimaud/postgresql:9.3
+  image: pascalgrimaud/postgresql:9.3
   volumes:
     - ~/volumes/postgresql93/data:/var/lib/postgresql
     - ~/volumes/postgresql93/logs:/var/log/postgresql

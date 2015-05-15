@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t pgrimaud/postgresql:9.3 .
+docker build -t pascalgrimaud/postgresql:9.3 .
