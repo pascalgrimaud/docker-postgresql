@@ -9,5 +9,4 @@ test:
   override:
     - docker run -d --name=postgresql -v ~/volumes/postgresql93/data:/var/lib/postgresql -v ~/volumes/postgresql93/logs:/var/log/postgresql pascalgrimaud/postgresql:9.3 ; sleep 10
     - docker logs postgresql
-    - docker exec -it postgresql sudo -u postgres -H psql -c "\conninfo"
-    - docker exec -it postgresql sudo -u postgres -H psql -c "SELECT version();"
+    - ls -al ~/volumes/postgresql93/data/9.3/.postgres_set_password

@@ -13,7 +13,7 @@ RUN apt-get -y install postgresql-${PG_VERSION} \
 # clean
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# Adjust PostgreSQL configuration so that remote connections to the database are possible. 
+# Adjust PostgreSQL configuration so that remote connections to the database are possible.
 RUN echo "host all  all    0.0.0.0/0  md5" >> /etc/postgresql/${PG_VERSION}/main/pg_hba.conf
 RUN echo "listen_addresses='*'" >> /etc/postgresql/${PG_VERSION}/main/postgresql.conf
 
