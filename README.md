@@ -4,6 +4,7 @@
 [![Circle CI](https://circleci.com/gh/pascalgrimaud/docker-postgresql.svg?style=svg)]
 (https://circleci.com/gh/pascalgrimaud/docker-postgresql)
 
+
 # Information
 
 The base docker image :
@@ -16,6 +17,7 @@ The GitHub project :
 
 
 # Installation
+
 You can clone this project and build with docker command :
 
 ```
@@ -33,7 +35,7 @@ docker build -t pascalgrimaud/ubuntu github.com/pascalgrimaud/docker-postgresql.
 
 # Usage
 
-Quick start with bidding to port 5432 and random password :
+Quick start with binding to port 5432 and random password :
 
 ```
 docker run -d -p 5432:5432 pgrimaud/postgresql:9.3
