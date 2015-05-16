@@ -29,7 +29,7 @@ docker build -t pascalgrimaud/postgresql:9.3 .
 You can build directly from the [GitHub project](https://github.com/pascalgrimaud/docker-postgresql/) :
 
 ```
-docker build -t pascalgrimaud/ubuntu github.com/pascalgrimaud/docker-postgresql.git
+docker build -t pascalgrimaud/postgresql:9.3 github.com/pascalgrimaud/docker-postgresql.git
 ```
 
 
@@ -59,7 +59,8 @@ docker run -d -p 5432:5432 -e POSTGRES_PASS="pass" pgrimaud/postgresql:9.3
 Start and mount a volume for data persistence at ~/volumes/postgresql93/data :
 
 ```
-docker run -d -p 5432:5432 -v ~/volumes/postgresql93/data:/var/lib/postgresql pgrimaud/postgresql:9.3
+docker run -d -p 5432:5432 -v ~/volumes/postgresql93/data:/var/lib/postgresql \
+pgrimaud/postgresql:9.3
 ```
 
 Start and mount a volume for data persistence at ~/volumes/postgresql93/data and logs at ~/volumes/postgresql93/logs :
