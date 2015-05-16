@@ -30,7 +30,6 @@ if [ ! -f ${PG_HOME}/${PG_VERSION}/.postgres_set_password ]; then
 	service postgresql start >/dev/null 2>&1
 	# generate password
 	PASS=${POSTGRES_PASS:-$(date +%s | sha256sum | base64 | head -c 16 ; echo)}
-	_word=$( [ ${POSTGRES_PASS} ] && echo "preset" || echo "random" )
 	# change password
 	sudo -u postgres psql -U postgres -d postgres -c "alter user postgres with password '$PASS';" >/dev/null 2>&1
 	touch ${PG_HOME}/${PG_VERSION}/.postgres_set_password

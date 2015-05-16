@@ -1,7 +1,8 @@
-[![logo](https://raw.githubusercontent.com/pascalgrimaud/docker/master/postgresql/postgresql.png)]
+[![logo](https://raw.githubusercontent.com/pascalgrimaud/docker-postgresql/master/postgresql.png)]
 (http://www.postgresql.org/)
 
-[![Circle CI](https://circleci.com/gh/pascalgrimaud/docker-postgresql.svg?style=svg)](https://circleci.com/gh/pascalgrimaud/docker-postgresql)
+[![Circle CI](https://circleci.com/gh/pascalgrimaud/docker-postgresql.svg?style=svg)]
+(https://circleci.com/gh/pascalgrimaud/docker-postgresql)
 
 # Information
 

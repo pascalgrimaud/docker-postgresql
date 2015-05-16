@@ -1,7 +1,7 @@
 FROM pascalgrimaud/ubuntu
 MAINTAINER Pascal Grimaud <pascalgrimaud@gmail.com>
 
-# make sure the package repository is up to date
+# update
 RUN apt-get -y update
 
 # install postgresql-9.3
