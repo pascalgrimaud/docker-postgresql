@@ -38,7 +38,7 @@ docker build -t pascalgrimaud/postgresql:9.3 github.com/pascalgrimaud/docker-pos
 Quick start with binding to port 5432 and random password :
 
 ```
-docker run -d -p 5432:5432 pgrimaud/postgresql:9.3
+docker run -d -p 5432:5432 pascalgrimaud/postgresql:9.3
 ```
 
 To get the password :
@@ -50,7 +50,7 @@ docker logs <id>
 Start and set a specific password for postgres user :
 
 ```
-docker run -d -p 5432:5432 -e POSTGRES_PASS="pass" pgrimaud/postgresql:9.3
+docker run -d -p 5432:5432 -e POSTGRES_PASS="pass" pascalgrimaud/postgresql:9.3
 ```
 
 
@@ -60,14 +60,14 @@ Start and mount a volume for data persistence at ~/volumes/postgresql93/data :
 
 ```
 docker run -d -p 5432:5432 -v ~/volumes/postgresql93/data:/var/lib/postgresql \
-pgrimaud/postgresql:9.3
+pascalgrimaud/postgresql:9.3
 ```
 
 Start and mount a volume for data persistence at ~/volumes/postgresql93/data and logs at ~/volumes/postgresql93/logs :
 
 ```
 docker run -d -p 5432:5432 -v ~/volumes/postgresql93/data:/var/lib/postgresql \
--v ~/volumes/postgresql93/logs:/var/log/postgresql pgrimaud/postgresql:9.3
+-v ~/volumes/postgresql93/logs:/var/log/postgresql pascalgrimaud/postgresql:9.3
 ```
 
 Alternately, use the docker-compose.yml (edit this file) :
