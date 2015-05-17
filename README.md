@@ -13,7 +13,7 @@ The base docker image :
 
 The GitHub project :
 
-  * [pascalgrimaud/docker-ubuntu](https://github.com/pascalgrimaud/docker-postgresql/)
+  * [pascalgrimaud/docker-postgresql](https://github.com/pascalgrimaud/docker-postgresql/)
 
 
 # Installation
