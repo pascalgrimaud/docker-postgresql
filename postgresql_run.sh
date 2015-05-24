@@ -19,11 +19,11 @@ if [ ! -d ${PG_DATADIR} ]; then
 		--lc-collate='en_US.UTF-8' \
 		--lc-ctype='en_US.UTF-8' \
 		--auth=trust >/dev/null
-	echo "Initializing database : done!"
+	echo "Initializing database : ok"
 fi
 
 # change the password
-if [ ! -f ${PG_HOME}/${PG_VERSION}/.postgres_set_password ]; then
+if [ ! -f ${PG_HOME}/${PG_VERSION}/.password ]; then
 	echo "Initializing the 'postgres' user password..."
 
 	# start service
@@ -32,11 +32,11 @@ if [ ! -f ${PG_HOME}/${PG_VERSION}/.postgres_set_password ]; then
 	PASS=${POSTGRES_PASS:-$(date +%s | sha256sum | base64 | head -c 16 ; echo)}
 	# change password
 	sudo -u postgres psql -U postgres -d postgres -c "alter user postgres with password '$PASS';" >/dev/null 2>&1
-	touch ${PG_HOME}/${PG_VERSION}/.postgres_set_password
+	touch ${PG_HOME}/${PG_VERSION}/.password
 	# stop service
 	service postgresql stop >/dev/null 2>&1
 
-	echo "Initializing the 'postgres' user password : done!"
+	echo "Initializing the 'postgres' user password : ok"
 fi
 
 # display info
@@ -48,7 +48,6 @@ echo "    psql -h <host> -p <port> -U postgres"
 if [ ! -d ${PASS} ]; then
 	echo "    and enter the password '$PASS' when prompted"
 	echo ""
-	echo "Please remember to change the above password as soon as possible!"
 else
 	echo "    and enter the password when prompted"
 fi

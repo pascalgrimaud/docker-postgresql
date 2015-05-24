@@ -21,7 +21,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 EXPOSE 5432
 
 # volumes
-VOLUME  ["/etc/postgresql", "/var/log/postgresql", "/var/lib/postgresql"]
+VOLUME ["/var/log/postgresql", "/var/lib/postgresql"]
 
 # script to start the container
 ADD postgresql_run.sh /postgresql_run.sh
