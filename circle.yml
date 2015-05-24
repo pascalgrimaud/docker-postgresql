@@ -10,4 +10,4 @@ test:
     - docker run -d -p 15432:5432 --name=postgresql -e POSTGRES_PASS="pgrimaud" -v ~/volumes/postgresql93/data:/var/lib/postgresql -v ~/volumes/postgresql93/logs:/var/log/postgresql pascalgrimaud/postgresql:9.3 ; sleep 30
     - docker logs postgresql
     - PGPASSWORD=pgrimaud psql -h localhost -p 15432 --username=postgres -c '\conninfo'
-    - PGPASSWORD=pgrimaud psql -h localhost -p 15432 --username=postgres -c 'select version()'
+    - PGPASSWORD=pgrimaud psql -h localhost -p 15432 --username=postgres -c 'select version();'
