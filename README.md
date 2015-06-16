@@ -21,9 +21,9 @@ The GitHub project :
 You can clone this project and build with docker command :
 
 ```
-git clone https://github.com/pascalgrimaud/docker-postgresql.git
-cd docker-postgresql
-docker build -t pascalgrimaud/postgresql:9.3 .
+git clone https://github.com/pascalgrimaud/docker-postgresql.git \
+&& cd docker-postgresql \
+&& docker build -t pascalgrimaud/postgresql:9.3 .
 ```
 
 
