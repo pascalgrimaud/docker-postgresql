@@ -23,6 +23,11 @@ EXPOSE 5432
 # volumes
 VOLUME ["/var/log/postgresql", "/var/lib/postgresql"]
 
+# add help
+ADD help.txt /help.txt
+ADD help /help
+RUN chmod 755 /help
+
 # script to start the container
 ADD postgresql_run.sh /postgresql_run.sh
 RUN chmod 755 /*.sh

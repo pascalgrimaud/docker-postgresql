@@ -34,6 +34,15 @@ docker build -t pascalgrimaud/postgresql:9.3 github.com/pascalgrimaud/docker-pos
 ```
 
 
+# Help
+
+To display usage :
+
+```
+docker run pascalgrimaud/postgresql:9.3 /help
+```
+
+
 # Usage
 
 Quick start with binding to port 5432 and random password :
