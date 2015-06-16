@@ -30,7 +30,8 @@ docker build -t pascalgrimaud/postgresql:9.3 .
 You can build directly from the [GitHub project](https://github.com/pascalgrimaud/docker-postgresql/) :
 
 ```
-docker build -t pascalgrimaud/postgresql:9.3 github.com/pascalgrimaud/docker-postgresql.git
+docker build -t pascalgrimaud/postgresql:9.3 \
+github.com/pascalgrimaud/docker-postgresql.git
 ```
 
 
