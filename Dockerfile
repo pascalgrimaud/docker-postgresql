@@ -24,8 +24,7 @@ EXPOSE 5432
 VOLUME ["/var/log/postgresql", "/var/lib/postgresql"]
 
 # add help
-ADD help.txt /help.txt
-ADD help /help
+ADD help help.txt /
 RUN chmod 755 /help
 
 # script to start the container

@@ -85,15 +85,19 @@ docker run -d -p 5432:5432 -v ~/volumes/postgresql93/data:/var/lib/postgresql \
 ```
 
 
-Alternately, use the docker-compose.yml (edit this file) :
-
-```
-docker-compose up
-```
-
 
 If you forget the postgres user password, delete the file .password :
 
 ```
 sudo rm ~/volumes/postgresql93/data/9.3/.password
+```
+
+
+
+# Docker compose with volumes
+
+You can use the docker-compose.yml (edit this file first) :
+
+```
+docker-compose up
 ```
