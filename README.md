@@ -5,7 +5,11 @@
 (https://circleci.com/gh/pascalgrimaud/docker-postgresql)
 
 
+
 # Information
+
+This image is used as a PostgreSQL Server 9.3.
+
 
 The base docker image :
 
@@ -14,6 +18,7 @@ The base docker image :
 The GitHub project :
 
   * [pascalgrimaud/docker-postgresql](https://github.com/pascalgrimaud/docker-postgresql/)
+
 
 
 # Installation
@@ -35,6 +40,7 @@ github.com/pascalgrimaud/docker-postgresql.git
 ```
 
 
+
 # Help
 
 To display usage :
@@ -42,6 +48,7 @@ To display usage :
 ```
 docker run pascalgrimaud/postgresql:9.3 /help
 ```
+
 
 
 # Usage
@@ -65,6 +72,7 @@ Start and set a specific password for postgres user :
 ```
 docker run -d -p 5432:5432 -e POSTGRES_PASS="pass" pascalgrimaud/postgresql:9.3
 ```
+
 
 
 # Usage with volumes
