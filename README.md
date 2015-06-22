@@ -46,7 +46,7 @@ github.com/pascalgrimaud/docker-postgresql.git
 To display usage :
 
 ```
-docker run pascalgrimaud/postgresql:9.3 /help
+docker run --rm pascalgrimaud/postgresql:9.3 /help
 ```
 
 
